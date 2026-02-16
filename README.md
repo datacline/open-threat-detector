@@ -260,21 +260,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Discussions**: [GitHub Discussions](https://github.com/yourusername/open-threat-detector/discussions)
 - **Security**: See [SECURITY.md](SECURITY.md) for reporting vulnerabilities
 
-## 🗺️ Roadmap
-
-- [x] OpenClaw detection (Windows, macOS, Linux)
-- [ ] GitHub Copilot detection
-- [ ] Cursor AI detection
-- [ ] Tabnine detection
-- [ ] Codeium detection
-- [ ] ChatGPT Desktop detection
-- [ ] Claude Desktop detection
-- [ ] Centralized reporting dashboard
-- [ ] Real-time alerting system
-- [ ] Remediation automation (optional)
 
 ---
 
-**Made with ❤️ by the security community**
+**Made with ❤️ by the security minded engineers**
 
 *Protecting organizations from shadow AI risks through open-source detection*
