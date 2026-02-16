@@ -1,0 +1,22 @@
+{
+  "name": "OpenClaw Detection - macOS/Linux",
+  "command": "#!/bin/bash\n\n# Download detection script\ncurl -sL https://raw.githubusercontent.com/yourusername/open-threat-detector/main/scripts/detect-openclaw.sh -o /tmp/detect-openclaw.sh\n\n# Make executable\nchmod +x /tmp/detect-openclaw.sh\n\n# Execute detection\n/tmp/detect-openclaw.sh --verbose\n\n# Capture exit code\nexit_code=$?\n\n# Clean up\nrm -f /tmp/detect-openclaw.sh\n\nexit $exit_code",
+  "commandType": "mac",
+  "launchType": "trigger",
+  "trigger": "0 2 * * *",
+  "timeout": "300",
+  "commandRunners": [],
+  "systems": [],
+  "systemGroups": [
+    "all-managed-systems"
+  ],
+  "user": "000000000000000000000000",
+  "sudo": true,
+  "schedule": {
+    "type": "cron",
+    "cron": "0 2 * * *",
+    "repeatType": "daily"
+  },
+  "files": [],
+  "timeToLiveSeconds": 604800
+}

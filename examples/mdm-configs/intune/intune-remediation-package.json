@@ -1,0 +1,36 @@
+{
+  "name": "OpenClaw Detection and Remediation",
+  "description": "Detects and optionally remediates OpenClaw installations",
+  "version": "1.0.0",
+  "detectionScript": {
+    "fileName": "Detect-OpenClaw.ps1",
+    "runAsAccount": "system",
+    "enforceSignatureCheck": false,
+    "runAs32Bit": false
+  },
+  "remediationScript": {
+    "fileName": "Remediate-OpenClaw.ps1",
+    "runAsAccount": "system",
+    "enforceSignatureCheck": false,
+    "runAs32Bit": false
+  },
+  "runSchedule": {
+    "frequency": "daily",
+    "time": "02:00"
+  },
+  "assignments": {
+    "included": [
+      {
+        "groupId": "all-devices",
+        "type": "allDevices"
+      }
+    ],
+    "excluded": []
+  },
+  "settings": {
+    "runRemediationOnDetection": false,
+    "restartDeviceAfterRemediation": false,
+    "maxRetries": 3,
+    "retryIntervalMinutes": 60
+  }
+}
