@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<computer_extension_attribute>
+    <id>0</id>
+    <name>OpenClaw Detection Status</name>
+    <description>Detects if OpenClaw is installed on the system. Returns 0 (Compliant) or 1 (Non-Compliant).</description>
+    <data_type>String</data_type>
+    <input_type>
+        <type>script</type>
+        <platform>Mac</platform>
+        <script>#!/bin/bash
+
+# OpenClaw Detection for Jamf Pro Extension Attribute
+# This is a simplified version that returns text for EA display
+
+OPENCLAW_DETECTED=false
+
+# Check CLI executable
+if command -v openclaw &amp;&gt; /dev/null; then
+    OPENCLAW_DETECTED=true
+fi
+
+# Check state directory
+if [[ -d "$HOME/.openclaw" ]]; then
+    OPENCLAW_DETECTED=true
+fi
+
+# Check configuration files
+if [[ -f "$HOME/.openclaw/config.yaml" ]]; then
+    OPENCLAW_DETECTED=true
+fi
+
+# Check for running processes
+if pgrep -if openclaw &amp;&gt; /dev/null; then
+    OPENCLAW_DETECTED=true
+fi
+
+# Return result for Jamf EA
+if [[ "$OPENCLAW_DETECTED" == "true" ]]; then
+    echo "&lt;result&gt;Detected (Non-Compliant)&lt;/result&gt;"
+else
+    echo "&lt;result&gt;Not Detected (Compliant)&lt;/result&gt;"
+fi
+        </script>
+    </input_type>
+    <inventory_display>General</inventory_display>
+    <recon_display>Extension Attributes</recon_display>
+</computer_extension_attribute>
