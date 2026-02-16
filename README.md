@@ -25,9 +25,6 @@ Shadow AI refers to unauthorized AI tools and services used within organizations
 | Tool | Status | Windows | macOS | Linux | Description |
 |------|--------|---------|-------|-------|-------------|
 | **[OpenClaw](detectors/openclaw/)** | ✅ Ready | ✅ | ✅ | ✅ | Detection of Unsecure AI assitant detection |
-| **GitHub Copilot - Shadow MCPs** | 🚧 Planned | - | - | - | Detection of Unprovisioned MCP extensions in Microsoft's AI pair programmer|
-| **Cursor AI - Shadow MCPs** | 🚧 Planned | - | - | - | Detection of Unprovisioned dangerous MCP extensions in Cursor|
-| **VS Code - Shadow MCPs** | 🚧 Planned | - | - | - | Detection of Unprovisioned MCP extensions in VS Code |
 
 > Want to add a detector? See [Adding New Detectors](docs/adding-detectors.md)
 
