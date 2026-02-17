@@ -15,7 +15,7 @@ The Open Threat Detector team takes security bugs seriously. We appreciate your 
 
 ### Please Do
 
-- **Email security concerns** to: [security@example.com] (replace with actual email)
+- **Create an Issue with Security tag
 - **Provide detailed information**:
   - Description of the vulnerability
   - Steps to reproduce the issue
